@@ -1,37 +1,63 @@
-# Modelo de projeto de ciência de dados
+# Análisando o engajamento de um perfil no Instagran
 
-Modelo de projeto de ciência de dados para ser utilizado como referência em projetos
-futuros. Desenvolvido por mim, [Francisco Bustamante](https://github.com/chicolucio),
-para alunos iniciantes em ciência de dados de meus cursos e mentorias.
+## Contexto do Projeto
+Este projeto foi desenvolvido com o objetivo de analisar o engajamento do perfil do Instagram de uma empresa, com base nos dados coletados desde o início das postagens até o dia 27 de março. A análise foca em identificar quais tipos de conteúdo geram maior interação com os seguidores e explorar o impacto das tags utilizadas nas publicações.
 
-Inspiração: [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/)
+### Questões que Guiaram a Análise
+1. **Qual tipo de conteúdo mais engaja no Instagram da empresa?**
+2. **Quais tags mais contribuem para o engajamento das publicações?**
 
-Clique no botão **Use this template** para criar um novo repositório com base neste modelo.
+## Direcionamentos da Análise
+Para responder às questões acima, foram seguidos os seguintes direcionamentos:
+
+- **Dados Considerados:**
+  - Curtidas, comentários e interações foram as métricas principais analisadas.
+  - A coluna de visualizações foi ignorada, pois não estava no escopo da análise.
+
+- **Tratamento de Dados:**
+  - As publicações sem tags tiveram os valores tratados como "vazio" para manter a consistência na análise.
+  
+## Metodologia
+1. **Coleta de Dados:**
+   - Os dados foram extraídos do histórico de postagens no Instagram da empresa.
+   
+2. **Tratamento e Limpeza:**
+   - As tags foram padronizadas, preenchendo campos vazios como "sem tag".
+   - Os dados foram filtrados para excluir colunas e métricas não relevantes.
+
+3. **Exploração de Dados:**
+   - Foi realizada uma análise exploratória para identificar padrões de engajamento associados ao tipo de conteúdo e às tags utilizadas.
+
+4. **Resultados Esperados:**
+   - Identificar o formato de conteúdo que mais gera engajamento.
+   - Determinar quais tags são mais eficazes para atrair curtidas, comentários e interações.
+
+## Próximos Passos
+Com base nos resultados desta análise, serão definidas estratégias de otimização para as publicações futuras no Instagram, priorizando os formatos e tags que demonstraram maior potencial de engajamento. 
+
 
 ## Organização do projeto
 
 ```
-├── .env               <- Arquivo de variáveis de ambiente (não versionar)
+
 ├── .gitignore         <- Arquivos e diretórios a serem ignorados pelo Git
 ├── ambiente.yml       <- O arquivo de requisitos para reproduzir o ambiente de análise
-├── LICENSE            <- Licença de código aberto se uma for escolhida
+├── LICENSE            <- Licença de código aberto (MIT)
 ├── README.md          <- README principal para desenvolvedores que usam este projeto.
 |
 ├── dados              <- Arquivos de dados para o projeto.
 |
-├── modelos            <- Modelos treinados e serializados, previsões de modelos ou resumos de modelos
 |
-├── notebooks          <- Cadernos Jupyter. A convenção de nomenclatura é um número (para ordenação),
-│                         as iniciais do criador e uma descrição curta separada por `-`, por exemplo
-│                         `01-fb-exploracao-inicial-de-dados`.
+├── notebooks          <- Jupyter Notebooks. 
+│                         
 │
 |   └──src             <- Código-fonte para uso neste projeto.
 |      │
 |      ├── __init__.py  <- Torna um módulo Python
 |      ├── config.py    <- Configurações básicas do projeto
-|      └── graficos.py  <- Scripts para criar visualizações exploratórias e orientadas a resultados
+|      
 |
-├── referencias        <- Dicionários de dados, manuais e todos os outros materiais explicativos.
+├── referencias        <- Dicionários de dados
 |
 ├── relatorios         <- Análises geradas em HTML, PDF, LaTeX, etc.
 │   └── imagens        <- Gráficos e figuras gerados para serem usados em relatórios
@@ -47,40 +73,7 @@ Clique no botão **Use this template** para criar um novo repositório com base 
 
 2. Crie um ambiente virtual para o seu projeto utilizando o gerenciador de ambientes de sua preferência.
 
-    a. Caso esteja utilizando o `conda`, exporte as dependências do ambiente para o arquivo `ambiente.yml`:
-
-      ```bash
-      conda env export > ambiente.yml
-      ```
-
-    b. Caso esteja utilizando outro gerenciador de ambientes, exporte as dependências
-    para o arquivo `requirements.txt` ou outro formato de sua preferência. Adicione o
-    arquivo ao controle de versão, removendo o arquivo `ambiente.yml`.
-
-3. Verifique o arquivo `notebooks/01-fb-exemplo.ipynb` para exemplos
-de uso do código.
-4. Renomeie o arquivo `notebooks/01-fb-exemplo.ipynb` para um nome
-mais apropriado ao seu projeto. E siga a convenção de nomenclatura para os demais
-notebooks.
-5. Remova arquivos de exemplo e adicione os arquivos de dados e notebooks do seu
-projeto.
-6. Verifique o arquivo `notebooks/src/config.py` para configurações básicas do projeto.
-Modifique conforme necessário, adicionando ou removendo caminhos de arquivos e
-diretórios.
-7. Atualize o arquivo `referencias/01_dicionario_de_dados.md` com o dicionário de dados
-do seu projeto.
-8. Atualize o `README.md` com informações sobre o seu projeto.
-9. Adicione uma licença ao projeto. Clique
-[aqui](https://docs.github.com/pt/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
-se precisar de ajuda para escolher uma licença.
-10. Renomeie o arquivo `.env.exemplo` para `.env`
-11. Adicione variáveis de ambiente sensíveis ao arquivo `.env`.
-
-Por padrão, o arquivo `.gitignore` já está configurado para ignorar arquivos de dados e
-arquivos de Notebook (para aqueles que usam ferramentas como
-[Jupytext](https://jupytext.readthedocs.io/en/latest/) e similares). Adicione ou remova
-outros arquivos e diretórios do `.gitignore` conforme necessário. Caso deseje adicionar
-forçadamente um Notebook ao controle de versão, faça um commit forçado com o
-comando `git add --force NOME_DO_ARQUIVO.ipynb`.
-
-Para mais informações sobre como usar Git e GitHub, [clique aqui](https://cienciaprogramada.com.br/2021/09/guia-definitivo-git-github/). Sobre ambientes virtuais, [clique aqui](https://cienciaprogramada.com.br/2020/08/ambiente-virtual-projeto-python/).
+   ```bash
+        conda env export > ambiente.yml
+   ```
+      
