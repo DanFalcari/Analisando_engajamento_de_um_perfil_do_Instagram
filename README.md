@@ -65,15 +65,16 @@ Com base nos resultados desta análise, serão definidas estratégias de otimiza
 
 ## Configuração do ambiente
 
-1. Faça o clone do repositório que será criado a partir deste modelo.
+1. Faça o clone do repositório.
 
     ```bash
-    git clone ENDERECO_DO_REPOSITORIO
+    git clone git@github.com:DanFalcari/Analisando_engajamento_de_um_perfil_do_Instagram.git
     ```
 
-2. Crie um ambiente virtual para o seu projeto utilizando o gerenciador de ambientes de sua preferência.
+2. Crie um ambiente virtual para o seu projeto utilizando o `conda`.
 
    ```bash
+        conda env create -f ambiente.yml -- name Instagram_engajamento
         conda env export > ambiente.yml
    ```
       
