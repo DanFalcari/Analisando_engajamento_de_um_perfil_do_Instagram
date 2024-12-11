@@ -1,4 +1,4 @@
-# Análisando o engajamento de um perfil no Instagran
+# Análisando o engajamento de um perfil no Instagram
 
 ## Contexto do Projeto
 Este projeto foi desenvolvido com o objetivo de analisar o engajamento do perfil do Instagram de uma empresa, com base nos dados coletados desde o início das postagens até o dia 27 de março. A análise foca em identificar quais tipos de conteúdo geram maior interação com os seguidores e explorar o impacto das tags utilizadas nas publicações.
